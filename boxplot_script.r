@@ -11,6 +11,8 @@ myplot2 + theme(panel.grid = element_blank(), panel.background = element_rect(fi
                 panel.border = element_rect(colour = "black", fill = NA, size = 0.4 ))
 #Rearranging values so that the first value should be "Before" and not "After" as they appear on the boxplot
 data1$Trimming <- with(data1, relevel(Trimming, "Before"))
-myplot3 <- ggplot(data1, aes(Trimming, percent_duplicates)) + geom_boxplot()
-myplot3 + theme(panel.grid = element_blank(), panel.background = element_rect(fill = "white"), 
-                panel.border = element_rect(colour = "black", fill = NA, size = 0.4 ))
+number_of_sequences <- ggplot(data1, aes(Trimming, total_sequences)) + geom_boxplot()
+number_of_sequences + theme(panel.grid = element_blank(), panel.background = element_rect(fill = "white"), 
+                panel.border = element_rect(colour = "black", fill = NA, size = 0.4 )) + ggtitle("Total number of sequences) + theme(plot.title = element_text(hjust = 0.5))
+
+
