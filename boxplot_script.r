@@ -1,3 +1,4 @@
+library(tidyverse)
 data1 <- read.csv(file.choose()) #Opening the csv file containing the data to plot 
 attach(data1) # Attaching the file 
 data1 #opening the data for viewing 
